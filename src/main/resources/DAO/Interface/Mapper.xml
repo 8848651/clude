@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!---->
+<mapper namespace="DAO.Interface.Mapper">
+    <!--数据库操作语句在这里写-->
+    <!--采用映射解决数据库字段和实体类字段不一致问题-->
+    <resultMap id="LXZH" type="DAO.Implement.User">
+        <!--ID用于主键的映射，result用于一般字段映射-->
+        <!--column:数据库类型，property:实体类对应类型-->
+        <id column="id" property="id"/>
+        <result column="username" property="name"/>
+        <result column="password" property="password"/>
+    </resultMap>
+
+    <!--增-->
+    <insert id="insert">
+        insert into users(username,password)
+        values (#{name},#{password})
+    </insert>
+
+    <!--删-->
+    <delete id="delete">
+        delete from users where username = #{name}
+    </delete>
+
+    <!--改-->
+    <update id="update">
+        update users
+        set
+        password=#{password}
+        where
+        username = #{name}
+    </update>
+
+    <!--查-->
+    <select id="Select" resultMap="LXZH">
+        select *
+        from users
+        <where>
+            username = #{name}
+        </where>
+    </select>
+</mapper>
