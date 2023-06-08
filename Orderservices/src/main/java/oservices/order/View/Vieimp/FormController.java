@@ -12,4 +12,9 @@ public class FormController {
     public void search1() {
         System.out.println("Orderservices服务启动了");
     }
+
+    @RequestMapping("/Order2")
+    public void search2() {
+
+    }
 }

@@ -19,6 +19,7 @@ public class Estart {
     @Autowired
     private RestHighLevelClient client;
 
+
     //增
     public void testAddDocument(String json,String ID) throws IOException {
         IndexRequest request = new IndexRequest("hotel").id(ID);
