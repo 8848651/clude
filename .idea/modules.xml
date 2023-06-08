@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Amqb/Amqb.iml" filepath="$PROJECT_DIR$/Amqb/Amqb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Gateway/Gateway.iml" filepath="$PROJECT_DIR$/Gateway/Gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hotel/Hotel.iml" filepath="$PROJECT_DIR$/Hotel/Hotel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Orderservices/order.iml" filepath="$PROJECT_DIR$/Orderservices/order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Userservices/Userservices.iml" filepath="$PROJECT_DIR$/Userservices/Userservices.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Workplace.iml" filepath="$PROJECT_DIR$/.idea/Workplace.iml" />
     </modules>
   </component>
