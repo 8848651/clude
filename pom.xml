@@ -2,9 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>Grandfather</groupId>
     <artifactId>pom</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
     <name>pom</name>
     <description>Demo project for Spring Boot</description>
 
@@ -24,6 +26,7 @@
         <springboot.version>2.3.9.RELEASE</springboot.version>
         <springcloud.version>Hoxton.SR10</springcloud.version>
         <nacos.version>2.2.5.RELEASE</nacos.version>
+        <elasticsearch.version>7.16.3</elasticsearch.version>
         <!--
         <springboot.version>2.4.0</springboot.version>
         <springcloud.version>2020.0.3</springcloud.version>
@@ -76,6 +79,7 @@
                 <version>${springboot.version}</version>
             </dependency>
 
+            <!--MQ消息队列-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-amqp</artifactId>
@@ -108,9 +112,29 @@
             </dependency>
 
             <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <scope>runtime</scope>
+            </dependency>
+
+            <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
                 <version>1.1.16</version>
+            </dependency>
+
+            <!--elasticsearch-->
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elasticsearch-rest-high-level-client</artifactId>
+                <version>${elasticsearch.version}</version>
+            </dependency>
+
+            <!--FastJson-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.71</version>
             </dependency>
 
         </dependencies>
@@ -128,13 +152,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.16</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.62</version>
         </dependency>
     </dependencies>
 
