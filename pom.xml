@@ -27,6 +27,7 @@
         <springcloud.version>Hoxton.SR10</springcloud.version>
         <nacos.version>2.2.5.RELEASE</nacos.version>
         <elasticsearch.version>7.16.3</elasticsearch.version>
+        <mybatis.version>3.5.0</mybatis.version>
         <!--
         <springboot.version>2.4.0</springboot.version>
         <springcloud.version>2020.0.3</springcloud.version>
@@ -103,13 +104,26 @@
             <dependency>
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis</artifactId>
-                <version>3.5.5</version>
+                <version>${mybatis.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis-spring</artifactId>
                 <version>2.1.1</version>
+            </dependency>
+
+            <!--mybatisplus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-annotation</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-core</artifactId>
+                <version>${mybatis.version}</version>
             </dependency>
 
             <dependency>

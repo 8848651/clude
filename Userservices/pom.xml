@@ -37,22 +37,16 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 		</dependency>
 
-		<!--eureka
-       <dependency>
-           <groupId>org.springframework.cloud</groupId>
-           <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-       </dependency>
-        -->
-
 		<!--nacos-->
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
 		</dependency>
 
+		<!--同步-->
 		<dependency>
-			<groupId>com.alibaba.cloud</groupId>
-			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 
 		<dependency>
@@ -60,20 +54,10 @@
 			<artifactId>feign-httpclient</artifactId>
 		</dependency>
 
-		<!--mybatis-->
+		<!--MQ消息队列用于异步-->
 		<dependency>
-			<groupId>org.mybatis.spring.boot</groupId>
-			<artifactId>mybatis-spring-boot-starter</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis-spring</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
 		</dependency>
 
 		<dependency>
@@ -82,64 +66,43 @@
 		</dependency>
 
 		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+
+		<!--mybatis-->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-annotation</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-core</artifactId>
+		</dependency>
+
+		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
 		</dependency>
-	</dependencies>
 
-	<profiles>
-		<!--生产环境1-->
-		<profile>
-			<id>pro1</id>
-			<properties>
-				<profile.active>pro1</profile.active>
-				<profile.name>student</profile.name>
-				<profile.password>student</profile.password>
-			</properties>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-		</profile>
-		<!--生产环境2-->
-		<profile>
-			<id>pro2</id>
-			<properties>
-				<profile.active>pro2</profile.active>
-				<profile.namespace>3bf401a1-51f3-44b4-94ab-9f21bb02f7c9</profile.namespace>
-				<profile.name>C##8848</profile.name>
-				<profile.password>8848</profile.password>
-			</properties>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-		</profile>
-		<!--开发环境1-->
-		<profile>
-			<id>dev1</id>
-			<properties>
-				<profile.active>dev1</profile.active>
-				<profile.namespace>dbb3f9fe-d34d-44bf-bbf9-1c6e37fce0eb</profile.namespace>
-				<profile.name>C##8848</profile.name>
-				<profile.password>8848</profile.password>
-			</properties>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-		</profile>
-		<!--开发环境2-->
-		<profile>
-			<id>dev2</id>
-			<properties>
-				<profile.active>dev2</profile.active>
-				<profile.namespace>dbb3f9fe-d34d-44bf-bbf9-1c6e37fce0eb</profile.namespace>
-				<profile.name>C##8848</profile.name>
-				<profile.password>8848</profile.password>
-			</properties>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-		</profile>
-	</profiles>
+
+	</dependencies>
 
 	<build>
 		<plugins>
@@ -160,14 +123,6 @@
 			</plugin>
 
 		</plugins>
-
-		<resources>
-			<resource>
-				<directory>${project.basedir}/src/main/resources</directory>
-				<filtering>true</filtering>
-			</resource>
-		</resources>
 	</build>
 
 </project>
-

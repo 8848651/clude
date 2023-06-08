@@ -4,8 +4,9 @@ import org.checkerframework.checker.units.qual.A;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import userservices.users.Dao.Daoint.Mappers;
-import userservices.users.Dao.Daoint.Userservice;
+import userservices.users.Dao.Hotel;
+import userservices.users.Dao.HotelMapper;
+
 
 import java.util.List;
 
@@ -13,12 +14,13 @@ import java.util.List;
 class UsersApplicationTests {
 
 	@Autowired
-	private Mappers mapper;
+	private HotelMapper HM;
 
 	@Test
-	void contextLoads() {
-		List<Userservice> userservices = mapper.selectOne("001");
-		System.out.println(userservices);
+	public void test1() {
+		Hotel hotel = HM.selectById((long)36934);
+		System.out.println(hotel.toString());
 	}
+
 
 }
