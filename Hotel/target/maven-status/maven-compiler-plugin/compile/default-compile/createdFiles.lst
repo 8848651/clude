@@ -1,0 +1,14 @@
+cn\itcast\hotel\Dao\HotelMapper.class
+cn\itcast\hotel\HM\PageResult.class
+cn\itcast\hotel\Dao\Hotel.class
+cn\itcast\hotel\Hotel\HoteloGet2Tests.class
+cn\itcast\hotel\Dao\HotelIndexConstants.class
+cn\itcast\hotel\web\HotelController.class
+cn\itcast\hotel\service\IHotelService.class
+cn\itcast\hotel\service\HotelService.class
+cn\itcast\hotel\Hotel\HoteloGetTests.class
+cn\itcast\hotel\HotelDemoApplication.class
+cn\itcast\hotel\Hotel\HoteloTests.class
+cn\itcast\hotel\Hotel\HotelIndexTest.class
+cn\itcast\hotel\Dao\HotelDoc.class
+cn\itcast\hotel\HM\RequestParams.class
