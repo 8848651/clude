@@ -10,4 +10,5 @@ import java.util.List;
 public interface IHotelService {
     public Hotel selectOne(Long id);
     public List<Hotel> selectAll();
+    public void insert(Hotel hh);
 }

@@ -22,6 +22,7 @@ public class Estart {
 
     //增
     public void testAddDocument(String json,String ID) throws IOException {
+        System.out.println("Estart");
         IndexRequest request = new IndexRequest("hotel").id(ID);
         request.source(json, XContentType.JSON);
         client.index(request, RequestOptions.DEFAULT);
