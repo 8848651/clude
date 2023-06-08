@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 public class pop {
     private final static String exangeName = "Hotel";
 
-
     //增
     @RabbitListener(bindings = @QueueBinding(
             exchange=@Exchange(name = exangeName,type = "direct"),
