@@ -33,9 +33,9 @@ public class HotelDemoApplicationTest {
     private HotelMapper HM;
 
     @Test
-    void test001(){
-        Hotel hotel = HM.selectById((long) 36934);
-        System.out.println(hotel.toString());
+    void test001() throws IOException {
+        HotelDoc hotelDoc = HT.testGetDocumentById("36934" );
+        System.out.println(hotelDoc.toString());
     }
 
     @Test
