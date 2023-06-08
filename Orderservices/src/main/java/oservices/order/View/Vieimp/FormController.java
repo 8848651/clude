@@ -8,4 +8,8 @@ import java.util.List;
 @RequestMapping("/Order")
 public class FormController {
 
+    @RequestMapping("/Order")
+    public void search1() {
+        System.out.println("Orderservices服务启动了");
+    }
 }

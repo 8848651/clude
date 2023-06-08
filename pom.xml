@@ -27,12 +27,6 @@
         <springcloud.version>Hoxton.SR10</springcloud.version>
         <nacos.version>2.2.5.RELEASE</nacos.version>
         <elasticsearch.version>7.16.3</elasticsearch.version>
-        <mybatis.version>3.5.0</mybatis.version>
-        <!--
-        <springboot.version>2.4.0</springboot.version>
-        <springcloud.version>2020.0.3</springcloud.version>
-        <nacos.version>2.1.2.RELEASE</nacos.version>
-        -->
     </properties>
 
     <dependencyManagement>
@@ -94,7 +88,7 @@
                 <version>${elasticsearch.version}</version>
             </dependency>
 
-            <!--mybatis-->
+            <!--MyBatis -->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -103,28 +97,28 @@
 
             <dependency>
                 <groupId>org.mybatis</groupId>
-                <artifactId>mybatis</artifactId>
-                <version>${mybatis.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.mybatis</groupId>
                 <artifactId>mybatis-spring</artifactId>
                 <version>2.1.1</version>
             </dependency>
 
-            <!--mybatisplus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.4.2</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-annotation</artifactId>
-                <version>${mybatis.version}</version>
+                <version>3.4.2</version>
             </dependency>
 
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-core</artifactId>
-                <version>${mybatis.version}</version>
+                <version>3.4.2</version>
             </dependency>
+
 
             <dependency>
                 <groupId>com.oracle.database.jdbc</groupId>
@@ -144,23 +138,22 @@
                 <version>1.1.16</version>
             </dependency>
 
-            <!--FastJson-->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>1.2.71</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.fasterxml.jackson.dataformat</groupId>
-                <artifactId>jackson-dataformat-xml</artifactId>
-                <version>2.9.10</version>
-            </dependency>
-
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
+        <!--FastJson-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.71</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+            <version>2.9.10</version>
+        </dependency>
 
         <dependency>
             <groupId>com.github.pagehelper</groupId>

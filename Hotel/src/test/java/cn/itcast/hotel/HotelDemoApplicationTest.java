@@ -1,6 +1,8 @@
 package cn.itcast.hotel;
 
+import cn.itcast.hotel.Dao.Hotel;
 import cn.itcast.hotel.Dao.HotelDoc;
+import cn.itcast.hotel.Dao.HotelMapper;
 import cn.itcast.hotel.Hotel.HoteloGet2Tests;
 import cn.itcast.hotel.Hotel.HoteloGetTests;
 import cn.itcast.hotel.Hotel.HoteloTests;
@@ -27,10 +29,13 @@ public class HotelDemoApplicationTest {
     @Autowired
     private HoteloGet2Tests HG2;
 
+    @Autowired
+    private HotelMapper HM;
+
     @Test
     void test001(){
-        String s = JSON.toJSONString(new HotelDoc(HL.selectOne((long) 36934)));
-        System.out.println(s);
+        Hotel hotel = HM.selectById((long) 36934);
+        System.out.println(hotel.toString());
     }
 
     @Test

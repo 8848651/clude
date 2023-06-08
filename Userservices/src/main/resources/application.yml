@@ -11,6 +11,11 @@ spring:
   application:
     name: userservices
 ---
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: cn.itcast.hotel.pojo
+---
 #driver-class-name: oracle.jdbc.OracleDriver
 #url: jdbc:oracle:thin:@192.168.70.130:1521:helowin
 #username: ${profile.name}

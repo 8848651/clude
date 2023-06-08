@@ -1,6 +1,7 @@
+server:
+  port: 8095
+---
 spring:
-  profiles:
-    active: 8096
   application:
     name: orderservice
 ---
