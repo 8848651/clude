@@ -42,6 +42,7 @@ public class Estart {
 
     //查
     public HotelDoc testGetDocumentById(String id) throws IOException {
+        System.out.println("testGetDocumentById");
         GetRequest request = new GetRequest("hotel", id);
         GetResponse response = client.get(request, RequestOptions.DEFAULT);
         String json = response.getSourceAsString();

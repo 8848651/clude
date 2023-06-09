@@ -7,8 +7,8 @@ import oservices.order.ES.Estart;
 import java.io.IOException;
 
 @RestController
-@ResponseBody
 @RequestMapping("/Order")
+@ResponseBody
 public class FormController {
 
     @Autowired
@@ -20,8 +20,7 @@ public class FormController {
     }
 
     @RequestMapping("/{id}")
-    public void search2(@PathVariable String id) throws IOException {
-        HotelDoc hotelDoc = es.testGetDocumentById(id);
-        System.out.println(hotelDoc);
+    public HotelDoc search2(@PathVariable String id) throws IOException {
+        return es.testGetDocumentById(id);
     }
 }

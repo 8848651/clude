@@ -1,0 +1,8 @@
+userservices\users\Dao\HotelDoc.class
+userservices\users\Dao\HotelMapper.class
+userservices\users\MQ\push.class
+userservices\users\Dao\Hotel.class
+userservices\users\service\IHotelService.class
+userservices\users\View\FormController.class
+userservices\users\UsersApplication.class
+userservices\users\service\HotelService.class

@@ -24,9 +24,9 @@ public class FormController {
     }
 
     @RequestMapping("/{id}")
-    public void search2(@PathVariable String id) throws IOException {
+    public Hotel search2(@PathVariable String id) throws IOException {
         Hotel hotel = HI.selectOne((long) Integer.parseInt(id));
-        System.out.println(hotel);
+        return hotel;
     }
 
     @RequestMapping("/User2")
