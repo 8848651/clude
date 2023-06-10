@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!---->
+<mapper namespace="Mybatis.Mapper.CRUDMapper">
+    <!--数据库操作语句在这里写-->
+    <!--查全部-->
+    <!--采用映射解决数据库字段和实体类字段不一致问题
+    数据库->sname 实体类->name       -->
+    <resultMap id="LXZH" type="Mybatis.Mybatis_GJL.User">
+        <!--ID用于主键的映射，result用于一般字段映射-->
+        <!--column:数据库类型，property:实体类对应类型-->
+        <id column="sno" property="StudentNumber"/>
+        <result column="sname" property="name"/>
+        <result column="pwd" property="password"/>
+    </resultMap>
+
+
+    <select id="Selectall" resultMap="LXZH">
+        <!--插入和查询不要写  ;  -->
+        <!--使用mapper代理保证User和数据库的字段一样-->
+        <!--1,如果查询的名字不一样可以取别名如sno as son-->
+        select * from ctable
+    </select>
+
+    <!--if-->
+    <!--多条件查询：精准查询-->
+    <select id="Multicondition_Select_JZ" resultMap="LXZH">
+        select *
+        from ctable
+        <where>
+            <if test="StudentNumber!=null and StudentNumber!='' ">
+                sno = #{StudentNumber}
+            </if>
+            <if test="name!=null and name!=''">
+                name = #{name}
+            </if>
+            <if test="password!=null and password!=''">
+                password = #{password}
+            </if>
+        </where>
+    </select>
+
+    <!--多条件查询：模糊查询-->
+    <select id="Multicondition_Select_MH" resultMap="LXZH">
+        select *
+        from ctable
+        <where>
+        <if test="StudentNumber!=null and StudentNumber!='' ">
+            sno like #{StudentNumber}
+        </if>
+        <if test="name!=null and name!=''">
+            name like #{name}
+        </if>
+        <if test="password!=null and password!=''">
+            password like #{password}
+        </if>
+        </where>
+    </select>
+
+    <!--choose-->
+    <!--单条件查询：模糊查询-->
+    <select id="Singleconditional_Select_MH" resultMap="LXZH">
+        select *
+        from ctable
+        <where>
+            <choose> <!--switch-->
+                <when test="StudentNumber!=null"><!--case-->
+                    sno like #{StudentNumber}
+                </when>
+                <when test="name!=null"><!--case-->
+                    name like #{name}
+                </when>
+                <when test="password!=null"><!--case-->
+                    password like #{password}
+                </when>
+            </choose>
+        </where>
+    </select>
+
+    <!--插入-->
+    <insert id="insert">
+        insert into ctable(sno,sname,pwd)
+        values (#{StudentNumber},#{name},#{password})
+    </insert>
+
+    <!--修改静态SQL-->
+    <update id="staticupdate">
+        update ctable
+        set
+            sname=#{name},
+            pwd=#{password}
+        where
+            sno=#{StudentNumber}
+    </update>
+
+    <!--修改动态SQL-->
+    <update id="dynamicupdate">
+        update ctable
+        <set>
+        <if test="name!=null and name!='' ">
+            sname=#{name}
+        </if>
+        <if test="password!=null and password!=''">
+            pwd=#{password}
+        </if>
+        </set>
+        <where>
+            sno=#{StudentNumber}
+        </where>
+    </update>
+
+    <!--删除一个-->
+    <delete id="deleteone">
+        delete from ctable where sno=#{StudentNumber}
+    </delete>
+
+    <!--删除多个-->
+    <delete id="deletemany">
+        delete from ctable where sno
+        in(
+            <foreach collection="StudentNumbers" item="StudentNumber" separator="，">
+                #{StudentNumber}
+            </foreach>
+        )
+    </delete>
+</mapper>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Mybatis.Mapper.FirmMapper">
+    <!--数据库操作语句在这里写-->
+    <!--查全部-->
+    <!--采用映射解决数据库字段和实体类字段不一致问题
+    数据库->sname 实体类->name       -->
+    <resultMap id="FirmMappers" type="Mybatis.Mybatis_GJL.Brand">
+        <!--ID用于主键的映射，result用于一般字段映射-->
+        <!--column:数据库类型，property:实体类对应类型-->
+        <id column="id" property="id"/>
+        <result column="brand_name" property="brandName"/>
+        <result column="company_name" property="companyName"/>
+        <result column="ordered" property="ordered"/>
+        <result column="description" property="description"/>
+        <result column="status " property="status"/>
+    </resultMap>
+
+    <select id="FirmSelectall" resultMap="FirmMappers">
+        select * from tb_brand
+    </select>
+
+    <select id="FirmSelectone" resultMap="FirmMappers">
+        select * from tb_brand where id=#{id}
+    </select>
+
+    <insert id="insert">
+        insert into tb_brand (brand_name, company_name, ordered, description, status)
+        values  (#{brandName}, #{companyName},#{ordered}, #{description},#{status})
+    </insert>
+
+    <update id="update">
+        update tb_brand
+        <set>
+        brand_name=#{brandName},
+        company_name=#{companyName},
+        ordered=#{ordered},
+        description=#{description},
+        status=#{status}
+        </set>
+        <where>
+        id=#{id}
+        </where>
+    </update>
+
+    <delete id="delete">
+        delete from tb_brand
+        <where>
+            id=#{id}
+        </where>
+    </delete>
+
+</mapper>

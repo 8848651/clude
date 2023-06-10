@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascriptnb</title>
+</head>
+<body>
+
+<img id="light" src="../../ZY/三只松鼠.png"> <br>
+<input type="button" id="buttons">
+
+<div class="cls">传智教育</div> <br>
+<div class="cls">黑马程序员</div> <br>
+
+<input type="checkbox" name="hobby"> 电影
+<input type="checkbox" name="hobby"> 旅游
+<input type="checkbox" name="hobby"> 游戏
+<br>
+
+<script>
+    /*
+
+        //获取单击对象
+        .onclick=function(){}
+
+        //四种获取对象方法
+        document.getElementById("buttons")
+        document.getElementsByName("hobby")
+        document.getElementsByName("hobby")
+        document.getElementsByClassName("cls")
+
+        //获取浏览器输入框对象并改变
+        location.href="/Web_war/FirmJSP/Firmadd.html";
+        //获取照片对象并改变
+        document.getElementById("light").src="../../ZY/优衣库.png";
+         //获取文字对象并改变文字样式
+        elementsByTagName[i].style.color="red";
+         //获取文字对象并改变文字内容
+        elementsByTagName[i].innerHTML="haha";
+     */
+    document.getElementById("buttons").onclick=function(){
+        document.getElementById("light").src="../../ZY/优衣库.png";
+    }
+
+
+   let elementsByTagName = document.getElementsByTagName("div");
+   for (let i = 0; i <elementsByTagName.length ; i++) {
+       elementsByTagName[i].style.color="red";
+       elementsByTagName[i].innerHTML="haha";
+   }
+
+   let elementsByName = document.getElementsByName("hobby");
+   for (let i = 0; i < elementsByName.length; i++) {
+       elementsByName[i].checked=true;
+   }
+
+
+   let elementsByClassName = document.getElementsByClassName("cls");
+
+
+</script>
+
+</body>
+</html>

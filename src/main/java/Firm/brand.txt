@@ -1,0 +1,30 @@
+create table tb_brand
+(
+    id          integer primary key,
+    brand_name   varchar2(20),
+    company_name varchar2(20),
+    ordered       number(3),
+    description  varchar2(100),
+    status       number(3)
+);
+
+--设置序列
+create sequence test_id --//序列名称为test_id
+ minvalue 1 --//最小值
+ nomaxvalue  --//无最大值限制
+ increment by 1  --//从1开始自增
+ start with 1 
+ nocache;
+ 
+ --设置触发器
+ create or replace trigger test_insertId --//设置触发器的名称
+ before insert on tb_brand for each row  --//在插入test之前，改成你自己的表名即可
+begin
+  select test_id.Nextval into:new.id from dual; -- //选择触发器，第3步新建的触发器
+ end;
+
+--插入数据
+insert into tb_brand (brand_name, company_name, ordered, description, status)
+values  ('小米', '小米科技有限公司', 50, 'are you ok', 1);
+
+SELECT * FROM tb_brand;

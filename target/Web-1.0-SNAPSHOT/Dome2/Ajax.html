@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/Web_war/AjaxDome" method="get">
+    <div>
+        <label for="username">用户名:</label>
+        <input type="text" id="username" name="username" required>
+        <span id="err_name" class="err_msg" style="display: none"></span>
+    </div>
+
+    <div>
+        <label for="password">密码:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+
+    <div>
+        <button type="submit">登陆</button>
+    </div>
+
+</form>
+
+<script>
+
+    document.getElementById("username").onblur=function () {
+
+        var username = this.value.trim(); // 去掉输入值两端的空格
+        //效验是否为空值
+        if (username === "") {
+            document.getElementById("err_name").innerHTML="用户名不能为空";
+            document.getElementById("err_name").style.display='';
+            return;
+        }
+        //效验是否为9个数字
+        var isNineDigits = /^\d{9}$/.test(username);
+        if (!isNineDigits) {
+            document.getElementById("err_name").innerHTML="用户名必须为9位数字";
+            document.getElementById("err_name").style.display='';
+            return;
+        }
+        //传到后端效验是否存在
+        var xhttp;
+        if (window.XMLHttpRequest) {
+            xhttp = new XMLHttpRequest();
+        } else {
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        //注意前后端分离这里要写全
+        xhttp.open("get","http://localhost/Web_war/AjaxDome?usename="+usename);
+        xhttp.send();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+
+                let responseText = this.responseText;
+                if (responseText=="true") {
+                    document.getElementById("err_name").innerHTML="用户已存在";
+                    document.getElementById("err_name").style.display='';
+                }else {
+                    document.getElementById("err_name").style.display='none';
+                }
+            }
+        };
+    }
+
+</script>
+
+</body>
+</html>
