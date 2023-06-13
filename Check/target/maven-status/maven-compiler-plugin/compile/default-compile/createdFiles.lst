@@ -1,0 +1,8 @@
+check\ES\Estart.class
+check\View\FormController.class
+check\Sync\Landclient.class
+check\MQ\MQPUSH.class
+check\Dao\Message.class
+check\CheckApplication.class
+check\Dao\PageResult.class
+check\MQ\MQPOP.class

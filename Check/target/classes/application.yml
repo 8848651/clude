@@ -1,0 +1,26 @@
+server:
+  port: 8091
+---
+spring:
+  application:
+    name: Check
+  cloud:
+    nacos:
+      server-addr: 192.168.70.130:8848
+      discovery:
+        cluster-name: AHGYDX
+---
+spring:
+  rabbitmq:
+    host: 192.168.70.130
+    port: 5672
+    username: develop
+    password: develop
+    virtual-host: /
+---
+feign:
+  httpclient:
+    enabled: true
+    max-connections: 200
+    max-connections-per-route: 50
+---

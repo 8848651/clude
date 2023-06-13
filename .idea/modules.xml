@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../CS/CS.iml" filepath="$PROJECT_DIR$/../CS/CS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Check/Check.iml" filepath="$PROJECT_DIR$/Check/Check.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Landing/Landing.iml" filepath="$PROJECT_DIR$/Landing/Landing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pom/Pom.iml" filepath="$PROJECT_DIR$/Pom/Pom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringDome.iml" filepath="$PROJECT_DIR$/SpringDome.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+    </modules>
+  </component>
+</project>

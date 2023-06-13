@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@192.168.70.130:1521:helowin
+    username: Spring
+    password: Spring
+    type: com.alibaba.druid.pool.DruidDataSource
+  application:
+    name: Landing
+---
+server:
+  port: 8090
+---
+spring:
+  cloud:
+    nacos:
+      server-addr: 192.168.70.130:8848
+      discovery:
+        cluster-name: AHGYDX
+---
+
