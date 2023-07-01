@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div id="app1">
+        <div>
+            <input type="text" v-model="inputText" placeholder="请输入内容" class="my-input">
+            <button @click="addSelect1" class="my-button1">打卡1</button>
+        </div>
+</div>
+<script src="../JS/vue.js"></script>
+<script src="../JS/axios.js"></script>
+<script>
+
+    new Vue({
+        el: '#app1',
+        data: {
+            inputText: ''
+        },
+        methods: {
+            addSelect1() {
+                this.uploadImage("http://127.0.0.1/select");
+            },
+            uploadImage(url) {
+                alert(url);
+                alert(this.inputText);
+                axios({
+                    method: "post",
+                    url: url,
+                    data:{
+                        text: this.inputText,
+                        password:"123456789"
+                    }
+
+                }).then(function(response) {
+                    alert(response.data.result);
+                });
+            }
+        }
+    });
+
+</script>
+</body>
+</html>
