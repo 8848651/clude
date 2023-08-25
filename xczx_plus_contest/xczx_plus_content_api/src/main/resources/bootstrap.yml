@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: content
+  profiles:
+    active: Develop
+  cloud:
+    nacos:
+      server-addr: 192.168.70.131:8848
+      discovery:
+        namespace: Develop
+        group: xuczx_plus
+      config:
+        namespace: Develop
+        group: xuczx_plus
+        file-extension: yaml
+        refresh-enabled: true
+        extension-configs:
+          - data-id: Content-Config-Develop.yaml
+            group: xuczx_plus
+            refresh: true
+        shared-configs:
+          - data-id: Freemarker-Config-Develop.yaml
+            group: xuczx_plus
+            refresh: true
+          - data-id: Feign-Config-Develop.yaml
+            group: xuczx_plus
+            refresh: true
+

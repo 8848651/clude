@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/XCZX.iml" filepath="$PROJECT_DIR$/XCZX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_auth/xczx_plus_auth.iml" filepath="$PROJECT_DIR$/xczx_plus_auth/xczx_plus_auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_base/xczx_plus_base.iml" filepath="$PROJECT_DIR$/xczx_plus_base/xczx_plus_base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_checkcode/xczx_plus_checkcode.iml" filepath="$PROJECT_DIR$/xczx_plus_checkcode/xczx_plus_checkcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_contest/xczx_plus_content_api/xczx_plus_content_api.iml" filepath="$PROJECT_DIR$/xczx_plus_contest/xczx_plus_content_api/xczx_plus_content_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_contest/xczx_plus_content_model/xczx_plus_content_model.iml" filepath="$PROJECT_DIR$/xczx_plus_contest/xczx_plus_content_model/xczx_plus_content_model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_contest/xczx_plus_content_service/xczx_plus_content_service.iml" filepath="$PROJECT_DIR$/xczx_plus_contest/xczx_plus_content_service/xczx_plus_content_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_contest/xczx_plus_contest.iml" filepath="$PROJECT_DIR$/xczx_plus_contest/xczx_plus_contest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_gatway/xczx_plus_gatway.iml" filepath="$PROJECT_DIR$/xczx_plus_gatway/xczx_plus_gatway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_learning/xczx_plus_learning_api/xczx_plus_learning_api.iml" filepath="$PROJECT_DIR$/xczx_plus_learning/xczx_plus_learning_api/xczx_plus_learning_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_learning/xczx_plus_learning_model/xczx_plus_learning_model.iml" filepath="$PROJECT_DIR$/xczx_plus_learning/xczx_plus_learning_model/xczx_plus_learning_model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_learning/xczx_plus_learning_service/xczx_plus_learning_service.iml" filepath="$PROJECT_DIR$/xczx_plus_learning/xczx_plus_learning_service/xczx_plus_learning_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_media/xczx_plus_media.iml" filepath="$PROJECT_DIR$/xczx_plus_media/xczx_plus_media.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_media/xczx_plus_media_api/xczx_plus_media_api.iml" filepath="$PROJECT_DIR$/xczx_plus_media/xczx_plus_media_api/xczx_plus_media_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_media/xczx_plus_media_model/xczx_plus_media_model.iml" filepath="$PROJECT_DIR$/xczx_plus_media/xczx_plus_media_model/xczx_plus_media_model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_media/xczx_plus_media_service/xczx_plus_media_service.iml" filepath="$PROJECT_DIR$/xczx_plus_media/xczx_plus_media_service/xczx_plus_media_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_messdk/xczx_plus_messdk.iml" filepath="$PROJECT_DIR$/xczx_plus_messdk/xczx_plus_messdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_orders/xczx_plus_orders_api/xczx_plus_orders_api.iml" filepath="$PROJECT_DIR$/xczx_plus_orders/xczx_plus_orders_api/xczx_plus_orders_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_orders/xczx_plus_orders_model/xczx_plus_orders_model.iml" filepath="$PROJECT_DIR$/xczx_plus_orders/xczx_plus_orders_model/xczx_plus_orders_model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_orders/xczx_plus_orders_service/xczx_plus_orders_service.iml" filepath="$PROJECT_DIR$/xczx_plus_orders/xczx_plus_orders_service/xczx_plus_orders_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_search/xczx_plus_search.iml" filepath="$PROJECT_DIR$/xczx_plus_search/xczx_plus_search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_system/xczx_plus_system.iml" filepath="$PROJECT_DIR$/xczx_plus_system/xczx_plus_system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_system/xczx_plus_system_api/xczx_plus_system_api.iml" filepath="$PROJECT_DIR$/xczx_plus_system/xczx_plus_system_api/xczx_plus_system_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_system/xczx_plus_system_model/xczx_plus_system_model.iml" filepath="$PROJECT_DIR$/xczx_plus_system/xczx_plus_system_model/xczx_plus_system_model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xczx_plus_system/xczx_plus_system_service/xczx_plus_system_service.iml" filepath="$PROJECT_DIR$/xczx_plus_system/xczx_plus_system_service/xczx_plus_system_service.iml" />
+    </modules>
+  </component>
+</project>

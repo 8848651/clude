@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Annotation profile for xczx_plus_system" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../Maven/apache-maven-3.6.1/jar/org/projectlombok/lombok/1.18.8/lombok-1.18.8.jar" />
+        </processorPath>
+        <module name="xczx_plus_system_api" />
+        <module name="xczx_plus_content_api" />
+        <module name="xczx_plus_media_service" />
+        <module name="xczx_plus_orders_api" />
+        <module name="xczx_plus_system_model" />
+        <module name="xczx_plus_checkcode" />
+        <module name="xczx_plus_system_service" />
+        <module name="xczx_plus_media_api" />
+        <module name="xczx_plus_base" />
+        <module name="xczx_plus_content_model" />
+        <module name="xczx_plus_content_service" />
+        <module name="xczx_plus_search" />
+        <module name="xczx_plus_orders_service" />
+        <module name="xczx_plus_learning_service" />
+        <module name="xczx_plus_media_model" />
+        <module name="xczx_plus_orders_model" />
+        <module name="xczx_plus_learning_api" />
+        <module name="xczx_plus_learning_model" />
+        <module name="xczx_plus_auth" />
+        <module name="xczx_plus_messdk" />
+        <module name="xczx_plus_gatway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="xczx-plus-generator" target="1.8" />
+      <module name="xczx-plus-message-sdk" target="1.8" />
+      <module name="xczx-plus-system" target="1.8" />
+      <module name="xczx-plus-system-api" target="1.8" />
+      <module name="xczx-plus-system-model" target="1.8" />
+      <module name="xczx-plus-system-service" target="1.8" />
+      <module name="xczx-plus-systems" target="1.8" />
+      <module name="xczx_base" target="1.8" />
+      <module name="xczx_parent" target="1.8" />
+      <module name="xczx_plus_captcha" target="1.8" />
+      <module name="xczx_plus_checktest" target="1.8" />
+      <module name="xczx_plus_generator" target="1.8" />
+      <module name="xczx_plus_message_sdk" target="1.8" />
+      <module name="xuecheng-plus-generator" target="1.8" />
+      <module name="xzcx-plus-message-sdk" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="xczx_base" options="" />
+      <module name="xczx_parent" options="" />
+      <module name="xczx_plus_content_api" options="" />
+      <module name="xczx_plus_content_model" options="" />
+      <module name="xczx_plus_content_service" options="" />
+      <module name="xczx_plus_contest" options="" />
+    </option>
+  </component>
+</project>

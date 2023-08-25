@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FindBugsConfigurable">
+    <option name="make" value="true" />
+    <option name="effort" value="default" />
+    <option name="priority" value="Medium" />
+    <option name="excludeFilter" value="" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/xczx_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_base/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_contest/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_content_model/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_content_api/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_content_service/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_base/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_contest/xczx_plus_content_model/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_contest/xczx_plus_content_api/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx-plus-system/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_system/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_system/xczx_plus_system_api/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_system/xczx_plus_system_model/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_system/xczx_plus_system_service/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_gatway/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_media/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_media/xczx_plus_media_api/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_media/xczx_plus_media_model/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_media/xczx_plus_media_service/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx-plus-message-sdk/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_messdk/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_search/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-plus-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_generator/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_checktest/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_captcha/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_auth/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_checkcode/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_learning/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_learning/xczx_plus_learning_api/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_learning/xczx_plus_learning_model/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_learning/xczx_plus_learning_service/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_orders/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_orders_api/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_orders/xczx_plus_orders_api/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_orders/xczx_plus_orders_model/pom.xml" />
+        <option value="$PROJECT_DIR$/xczx_plus_orders/xczx_plus_orders_service/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SuppressionsComponent">
+    <option name="suppComments" value="[]" />
+  </component>
+</project>

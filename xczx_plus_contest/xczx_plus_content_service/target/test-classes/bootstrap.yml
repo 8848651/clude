@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: content_service
+  profiles:
+    active: Develop
+  cloud:
+    nacos:
+      server-addr: 192.168.70.130:8848
+      config:
+        namespace: Develop
+        group: xuczx_plus
+        file-extension: yaml
+        refresh-enabled: true
+        shared-configs:
+          - data-id: Content-Service-Develop.yaml
+            group: xuczx_plus
+            refresh: true
+

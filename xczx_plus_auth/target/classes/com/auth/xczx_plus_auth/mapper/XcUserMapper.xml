@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.auth.xczx_plus_auth.mapper.XcUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.auth.xczx_plus_auth.model.Dao.XcUser">
+        <id column="id" property="id" />
+        <result column="username" property="username" />
+        <result column="password" property="password" />
+        <result column="salt" property="salt" />
+        <result column="wx_unionid" property="wxUnionid" />
+        <result column="nickname" property="nickname" />
+        <result column="name" property="name" />
+        <result column="userpic" property="userpic" />
+        <result column="company_id" property="companyId" />
+        <result column="utype" property="utype" />
+        <result column="birthday" property="birthday" />
+        <result column="sex" property="sex" />
+        <result column="email" property="email" />
+        <result column="cellphone" property="cellphone" />
+        <result column="qq" property="qq" />
+        <result column="status" property="status" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+
+    <select id="GetAuthority" resultType="java.lang.String">
+        SELECT m.code FROM xc_menu m where m.p_id in (
+            SELECT p.menu_id FROM xc_permission p where p.role_id in (
+                SELECT r.role_id FROM xc_user_role r where r.user_id=#{id}
+            )
+        )
+    </select>
+
+
+</mapper>

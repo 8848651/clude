@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.contest.xczx_plus_content_service.content.mapper.TeachplanMapper">
+    <resultMap id="BaseResultMap" type="com.contest.xczx_plus_content_model.content.Dao.Teachplan">
+        <id column="id" property="id" />
+        <result column="pname" property="pname" />
+        <result column="parentid" property="parentid" />
+        <result column="grade" property="grade" />
+        <result column="media_type" property="mediaType" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="description" property="description" />
+        <result column="timelength" property="timelength" />
+        <result column="orderby" property="orderby" />
+        <result column="course_id" property="courseId" />
+        <result column="course_pub_id" property="coursePubId" />
+        <result column="status" property="status" />
+        <result column="is_preview" property="isPreview" />
+        <result column="create_date" property="createDate" />
+        <result column="change_date" property="changeDate" />
+    </resultMap>
+
+
+    <update id="UpdateBatch">
+        <foreach collection="Mylist" item="item" separator=";">
+            update teachplan
+            <set>
+                <if test="item.pname != null">pname = #{item.pname},</if>
+                <if test="item.parentid != null">parentid = #{item.parentid},</if>
+                <if test="item.grade != null">grade = #{item.grade},</if>
+                <if test="item.mediaType != null">media_type = #{item.mediaType},</if>
+                <if test="item.startTime != null">start_time = #{item.startTime},</if>
+                <if test="item.endTime != null">end_time = #{item.endTime},</if>
+                <if test="item.description != null">description = #{item.description},</if>
+                <if test="item.timelength != null">timelength = #{item.timelength},</if>
+                <if test="item.orderby != null">orderby = #{item.orderby},</if>
+                <if test="item.courseId != null">course_id = #{item.courseId},</if>
+                <if test="item.coursePubId != null">course_pub_id = #{item.coursePubId},</if>
+                <if test="item.status != null">status = #{item.status},</if>
+                <if test="item.isPreview != null">is_preview = #{item.isPreview},</if>
+                <if test="item.createDate != null">create_date = #{item.createDate},</if>
+                <if test="item.changeDate != null">change_date = #{item.changeDate}</if>
+            </set>
+            where id = #{item.id}
+        </foreach>
+    </update>
+
+
+    <resultMap id="BaseResultMap1" type="com.contest.xczx_plus_content_model.content.Pto.TreeTeachplanDto"  extends="BaseResultMap">
+        <association property="teachplanMedia" javaType="com.contest.xczx_plus_content_model.content.Dao.TeachplanMedia">
+            <id column="id" property="id" />
+            <result column="media_id" property="mediaId" />
+            <result column="teachplan_id" property="teachplanId" />
+            <result column="course_id" property="courseId" />
+            <result column="media_fileName" property="mediaFilename" />
+            <result column="create_date" property="createDate" />
+            <result column="create_people" property="createPeople" />
+            <result column="change_people" property="changePeople" />
+        </association>
+    </resultMap>
+
+    <select id="SelectTeachplan" resultMap="BaseResultMap1">
+        select * from teachplan t1 left join teachplan_media t2 on t1.id=t2.teachplan_id where t1.course_id=#{CourseId}
+    </select>
+
+</mapper>

@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: system
+  cloud:
+    nacos:
+      server-addr: 192.168.70.131:8848
+      discovery:
+        namespace: Develop
+        group: xuczx_plus
+      config:
+        namespace: Develop
+        group: xuczx_plus
+        file-extension: yaml
+        refresh-enabled: true
+        extension-configs:
+          - data-id: System-Config-Develop.yaml #端口
+            group: xuczx_plus
+            refresh: true
+
+
+

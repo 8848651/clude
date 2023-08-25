@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.media.xczx_plus_media_service.mapper.MediaProcessMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.media.xczx_plus_media_model.model.Dao.MediaProcess">
+        <id column="id" property="id" />
+        <result column="file_id" property="fileId" />
+        <result column="filename" property="filename" />
+        <result column="bucket" property="bucket" />
+        <result column="status" property="status" />
+        <result column="create_date" property="createDate" />
+        <result column="finish_date" property="finishDate" />
+        <result column="url" property="url" />
+        <result column="type" property="type" />
+    </resultMap>
+
+    <select id="SelectList" resultType="com.media.xczx_plus_media_model.model.Dao.MediaProcess">
+        select * from media_process t where t.id % #{total}= #{index} and (t.status=1 or t.status=3) and t.fail_count &lt; 3 limit 2;
+    </select>
+
+    <update id="UpdateLocks">
+        update media_process t set t.status=4 where (t.status=1 or t.status=3) and t.fail_count &lt; 3 and t.id=#{id}
+    </update>
+
+</mapper>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/xczx_plus_auth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_auth/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_base/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_base/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_checkcode/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_checkcode/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_contest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_contest/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_contest/xczx_plus_content_api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_contest/xczx_plus_content_api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_contest/xczx_plus_content_model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_contest/xczx_plus_content_model/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_contest/xczx_plus_content_service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_contest/xczx_plus_content_service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_gatway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_gatway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_learning/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_learning/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_learning/xczx_plus_learning_api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_learning/xczx_plus_learning_api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_learning/xczx_plus_learning_model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_learning/xczx_plus_learning_model/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_learning/xczx_plus_learning_service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_learning/xczx_plus_learning_service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_media/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_media/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_media/xczx_plus_media_api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_media/xczx_plus_media_api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_media/xczx_plus_media_model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_media/xczx_plus_media_model/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_media/xczx_plus_media_service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_media/xczx_plus_media_service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_messdk/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_messdk/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_orders/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_orders/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_orders/xczx_plus_orders_api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_orders/xczx_plus_orders_api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_orders/xczx_plus_orders_model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_orders/xczx_plus_orders_model/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_orders/xczx_plus_orders_service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_orders/xczx_plus_orders_service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_parent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_parent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_search/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_search/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_system/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_system/xczx_plus_system_api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_system/xczx_plus_system_api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_system/xczx_plus_system_model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_system/xczx_plus_system_model/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_system/xczx_plus_system_service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_system/xczx_plus_system_service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xczx_plus_system/xczx_plus_system_service/src/test/resources" charset="UTF-8" />
+  </component>
+</project>
