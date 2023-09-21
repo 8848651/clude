@@ -1,6 +1,7 @@
 package com.auth.xczx_plus_auth.config;
 
 import org.springframework.context.annotation.Primary;
+import org.springframework.security.oauth2.common.exceptions.InvalidScopeException;
 import org.springframework.security.oauth2.provider.*;
 import org.springframework.security.oauth2.provider.client.BaseClientDetails;
 import org.springframework.stereotype.Service;
@@ -12,9 +13,7 @@ import java.util.List;
  */
 @Service
 @Primary
-public class JdbcClient implements ClientDetailsService, ClientRegistrationService {
-
-
+public class JdbcClient implements ClientDetailsService{
 
     /**
      * 根据客户端ID加载客户端信息。
@@ -37,54 +36,5 @@ public class JdbcClient implements ClientDetailsService, ClientRegistrationServi
         //秘钥
         clientDetail.setClientSecret(Secret);
         return clientDetail;
-    }
-
-    /**
-     * 添加客户端信息。
-     * @param clientDetails 要添加的客户端信息。
-     * @throws ClientAlreadyExistsException 如果客户端已存在。
-     */
-    @Override
-    public void addClientDetails(ClientDetails clientDetails) throws ClientAlreadyExistsException {
-    }
-
-    /**
-     * 更新客户端信息。
-     * @param clientDetails 要更新的客户端信息。
-     * @throws NoSuchClientException 如果客户端不存在。
-     */
-    @Override
-    public void updateClientDetails(ClientDetails clientDetails) throws NoSuchClientException {
-
-    }
-
-    /**
-     * 更新客户端密钥。
-     * @param s  客户端ID。
-     * @param s1 新的客户端密钥。
-     * @throws NoSuchClientException 如果客户端不存在。
-     */
-    @Override
-    public void updateClientSecret(String s, String s1) throws NoSuchClientException {
-
-    }
-
-    /**
-     * 删除客户端信息。
-     * @param s 客户端ID。
-     * @throws NoSuchClientException 如果客户端不存在。
-     */
-    @Override
-    public void removeClientDetails(String s) throws NoSuchClientException {
-
-    }
-
-    /**
-     * 列出所有客户端信息。
-     * @return 客户端信息列表。
-     */
-    @Override
-    public List<ClientDetails> listClientDetails() {
-        return null;
     }
 }

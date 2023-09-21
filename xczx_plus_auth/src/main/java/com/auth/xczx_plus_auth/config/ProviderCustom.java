@@ -16,6 +16,7 @@ public class ProviderCustom extends DaoAuthenticationProvider {
     public void setUserDetailsService(UserDetailsService userDetailsService) {
         super.setUserDetailsService(userDetailsService);
     }
+    //用于密码效验
     @Override
     protected void additionalAuthenticationChecks(UserDetails userDetails, UsernamePasswordAuthenticationToken authentication) throws AuthenticationException {
     }

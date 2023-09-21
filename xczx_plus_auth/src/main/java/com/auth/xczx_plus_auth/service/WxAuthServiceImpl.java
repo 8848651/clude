@@ -72,7 +72,11 @@ public class WxAuthServiceImpl implements AuthService{
      */
     private Map<String,String> getAccess_token(String code){
 
-        String url_template = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=%s&secret=%s&code=%s&grant_type=authorization_code";
+        String url_template = "https://api.weixin.qq.com/sns/oauth2/access_token" +
+                "?appid=%s" +
+                "&secret=%s" +
+                "&code=%s" +
+                "&grant_type=authorization_code";
         //最终的请求路径
         String url = String.format(url_template, appid, secret, code);
         //远程调用此url
@@ -91,7 +95,9 @@ public class WxAuthServiceImpl implements AuthService{
      */
     private Map<String,String> getUserinfo(String access_token,String openid){
 
-        String url_template = "https://api.weixin.qq.com/sns/userinfo?access_token=%s&openid=%s";
+        String url_template = "https://api.weixin.qq.com/sns/userinfo" +
+                "?access_token=%s" +
+                "&openid=%s";
         String url = String.format(url_template, access_token, openid);
         ResponseEntity<String> exchange = restTemplate.exchange(url, HttpMethod.GET, null, String.class);
         //获取响应的结果

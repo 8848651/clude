@@ -14,20 +14,22 @@ import javax.annotation.Resource;
 
  @Configuration
  @EnableAuthorizationServer
+ //AuthorizationServerConfigurerAdapter授权服务器配置
  public class AuthorizationServer extends AuthorizationServerConfigurerAdapter {
 
   @Resource(name="TokenServices")
   private AuthorizationServerTokenServices TokenServices;
   @Autowired
-  JdbcClient JdbcClient;
+  private JdbcClient JdbcClient;
+  @Autowired
+  private RedisCodeServices RedisCodeServices;
   @Autowired
   private AuthenticationManager authenticationManager;
 
   //客户端详情服务
   @Override
-  public void configure(ClientDetailsServiceConfigurer clients)
-          throws Exception {
-   clients.withClientDetails(JdbcClient);
+  public void configure(ClientDetailsServiceConfigurer clients)throws Exception {
+        clients.withClientDetails(JdbcClient);
   }
 
   //令牌端点的访问配置
@@ -35,6 +37,7 @@ import javax.annotation.Resource;
   public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
    endpoints
            .authenticationManager(authenticationManager)//认证管理器
+           .authorizationCodeServices(RedisCodeServices)//授权码管理器
            .tokenServices(TokenServices)//令牌管理服务
            .allowedTokenEndpointRequestMethods(HttpMethod.POST);
   }

@@ -6,9 +6,7 @@ POST http://localhost:60006/auth/oauth/token?client_id=XcWebApp&client_secret=Xc
 ###
 POST http://localhost:63070/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=authorization_code&code=5ynqX6&redirect_uri=http://www.51xuecheng.cn
 ###
-POST http://localhost:63070/auth/oauth/authorize?client_id=XcWebApp&response_type=code&scope=all&redirect_uri=http://www.51xuecheng.cn
+POST http://localhost:60006/auth/oauth/authorize?client_id=XcWebApp&response_type=code&scope=all&redirect_uri=http://www.51xuecheng.cn
 ###
 POST http://localhost:63070/auth/oauth/check_token?token=
-
-
 ###

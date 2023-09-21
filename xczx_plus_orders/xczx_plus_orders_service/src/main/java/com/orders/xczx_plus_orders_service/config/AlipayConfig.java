@@ -2,7 +2,7 @@ package com.orders.xczx_plus_orders_service.config;
 
 
  public class AlipayConfig {
-  public static String url=" http://5psws7.natappfree.cc";
+  public static String url="http://euufmz.natappfree.cc";
   // 服务器异步通知页面路径 需http://或者https://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
   public static String notify_url = url+"/orders/paynotify";
   // 请求网关地址

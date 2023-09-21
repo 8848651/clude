@@ -10,7 +10,6 @@ import java.io.IOException;
 public class Fallback implements feignclient1,feignclient2{
     @Override
     public String Upload(MultipartFile filedata, String objectName) throws IOException {
-        System.out.println("1111111111111111111");
         return null;
     }
 

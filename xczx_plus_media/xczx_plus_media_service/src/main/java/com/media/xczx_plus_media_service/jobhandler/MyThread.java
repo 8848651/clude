@@ -81,7 +81,6 @@ public class MyThread extends Thread {
             mediaProcessService.SuccessXxljob(mediaProcess);
         }catch (Exception e){
             mediaProcessService.FailXxljob(mediaProcess);
-            return;
         }finally {
             //计数器-1
             countDownLatch.countDown();
