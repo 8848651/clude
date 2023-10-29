@@ -22,15 +22,18 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 
   @Override
   public void configure(ResourceServerSecurityConfigurer resources) {
-   resources.resourceId(RESOURCE_ID)
-           .tokenStore(tokenStore)
-           .stateless(true);
+   resources.resourceId(RESOURCE_ID)//资源服务器的资源ID
+           .tokenStore(tokenStore)//令牌存储方式
+           .stateless(true);//不存会话信息
   }
 
  @Override
  public void configure(HttpSecurity http) throws Exception {
-  http.csrf().disable()
+  http
+          .csrf()
+          .disable()
           .authorizeRequests()
-          .anyRequest().permitAll();
+          .anyRequest()
+          .permitAll();
  }
 }

@@ -28,7 +28,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public RestErrorResponse methodArgumentNotValidException(MethodArgumentNotValidException e){
+    public RestErrorResponse methodException(MethodArgumentNotValidException e){
 
         BindingResult bindingResult = e.getBindingResult();
         List<String> list = new ArrayList<>();

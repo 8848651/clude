@@ -4,9 +4,11 @@
 
 POST http://localhost:60006/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username={"username":"123","password":"123","authType":"password"}
 ###
-POST http://localhost:63070/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=authorization_code&code=5ynqX6&redirect_uri=http://www.51xuecheng.cn
+POST http://localhost:60006/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=authorization_code&code=1234&redirect_uri=http://www.51xuecheng.cn
+
 ###
 POST http://localhost:60006/auth/oauth/authorize?client_id=XcWebApp&response_type=code&scope=all&redirect_uri=http://www.51xuecheng.cn
+
 ###
-POST http://localhost:63070/auth/oauth/check_token?token=
+POST http://localhost:60006/auth/oauth/check_token?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieGN6eF9wbHVzX21lZGlhIiwieGN6eF9wbHVzX2NvbnRlbnQiLCJ4Y3p4X3BsdXNfbGVhcm5pbmciLCJ4Y3p4X3BsdXNfb3JkZXJzIl0sInVzZXJfbmFtZSI6InN0cmluZyIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2OTUzMDMyNTMsImF1dGhvcml0aWVzIjpbImFycmF5Il0sImp0aSI6IjlmZTM0NDRhLTNhNWEtNGIzNS04MTBjLTZhOTEwMGQ2N2RlZiIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.3JzurDv6130-DY_mhgTu9oZP-y3r2fx0VbZUjdBZ8Rg
 ###

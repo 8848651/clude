@@ -23,7 +23,6 @@ public class JdbcClient implements ClientDetailsService{
      */
     @Override
     public ClientDetails loadClientByClientId(String ClientId) throws ClientRegistrationException {
-
         String Clientid="XcWebApp";
         String Secret="XcWebApp";
         String resourceId="xczx_plus_content,xczx_plus_media,xczx_plus_orders,xczx_plus_learning";
@@ -31,6 +30,7 @@ public class JdbcClient implements ClientDetailsService{
         String GrantTypes="authorization_code,password,client_credentials,implicit,refresh_token";
         String Auto=null;
         String Url="http://www.51xuecheng.cn";
+
         //客户端ID，资源ID，授权范围，授权类型，自动批准 aut自动 null手动 ，回调URL
         BaseClientDetails clientDetail = new BaseClientDetails(Clientid, resourceId, Scopes,GrantTypes, Auto,Url);
         //秘钥
