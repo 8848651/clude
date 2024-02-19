@@ -2,6 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.contest.xczx_plus_content_service.content.mapper.TeachplanMapper">
+
     <resultMap id="BaseResultMap" type="com.contest.xczx_plus_content_model.content.Dao.Teachplan">
         <id column="id" property="id" />
         <result column="pname" property="pname" />
@@ -48,7 +49,8 @@
 
 
     <resultMap id="BaseResultMap1" type="com.contest.xczx_plus_content_model.content.Pto.TreeTeachplanDto"  extends="BaseResultMap">
-        <association property="teachplanMedia" javaType="com.contest.xczx_plus_content_model.content.Dao.TeachplanMedia">
+        <!--collection一对多，association一对一-->
+        <collection property="teachplanMedia" javaType="com.contest.xczx_plus_content_model.content.Dao.TeachplanMedia">
             <id column="id" property="id" />
             <result column="media_id" property="mediaId" />
             <result column="teachplan_id" property="teachplanId" />
@@ -57,7 +59,7 @@
             <result column="create_date" property="createDate" />
             <result column="create_people" property="createPeople" />
             <result column="change_people" property="changePeople" />
-        </association>
+        </collection>
     </resultMap>
 
     <select id="SelectTeachplan" resultMap="BaseResultMap1">
